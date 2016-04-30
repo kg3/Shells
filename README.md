@@ -1,7 +1,7 @@
 # Shells
 using C to code basic shell programs; takes special commands that perform basic functions.  Exercise in courses to learn operating systems.
 
-# shell.c
+### shell.c
   1. Your program will print out a prompt of msh> when it is ready to accept input. It must read a line of input and, if the command given is a supported shell command, it shall execute the command and display the output of the command.
   2. If the command is not supported your shell shall print the invalid command followed by “: Command not found.”
   3. If the command option is an invalid option then your shell shall print the command followed by “: invalid option --” and the option that was invalid as well as a prompt to try —help.
@@ -14,7 +14,7 @@ using C to code basic shell programs; takes special commands that perform basic 
   9.  Typing ctrl-c or ctrl-z shall not stop or kill your shell. Your shell shall ignore those keystrokes.
 
 
-# multithreaded_word_search.c
+### multithreaded_word_search.c
   1. You will be provided a large text file , shakespeare.txt, to use as your data file. The application will memory map this file and perform all searches on the file when it is memory resident.
   2. Your application process will spawn the requested number of threads and split the search task evenly among them. A command of search Mercutio 10 will spawn 10 threads which will each search 1/10 of the text.
   3. Your application will, using the system call gettimeofday calculate the time each query took and report that back to the client as well
