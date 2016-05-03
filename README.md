@@ -36,7 +36,8 @@ using C to code basic shell programs; takes special commands that perform basic 
   5. list List the files in the file system.
   6. df Display the amount of disk space left in the file system.
 
-* Your program shall allocate 5 MB (5242880 bytes) of disk space for the file system. 1.4: The file system shall support files up to 131,072 bytes in size.
+* Your program shall allocate 5 MB (5242880 bytes) of disk space for the file system. 
+* The file system shall support files up to 131,072 bytes in size.
 * The file system shall support up to 128 files.
 * The file system block size shall be 4096 bytes.
 * The file system shall use an indexed allocation scheme.
