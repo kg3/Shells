@@ -29,15 +29,15 @@ using C to code basic shell programs; takes special commands that perform basic 
 
 ### filesystem_shell.c
 ‘in-memory” file system. Your program will provide the user with 5MB of “virtual” drive space. Users will have the ability to list the files currently in the file system, add files, and remove files. Files will not persist in the file system when the program exits.
-  1. put <filename> Copy the file to the file system.
-  2. get <filename> Retrieve the file from the file system.
-  3. get <filename> <newfilename> Retrieve the file from the file system and place it in the file named <newfilename>.
-  4. del <filename> Delete the file from the file system. 
+  1. put -filename- Copy the file to the file system.
+  2. get -filename- Retrieve the file from the file system.
+  3. get -filename- -newfilename- Retrieve the file from the file system and place it in the file named -newfilename-.
+  4. del -filename- Delete the file from the file system. 
   5. list List the files in the file system.
   6. df Display the amount of disk space left in the file system.
-1. Your program shall allocate 5 MB (5242880 bytes) of disk space for the file system. 1.4: The file system shall support files up to 131,072 bytes in size.
-2. The file system shall support up to 128 files.
-3. The file system block size shall be 4096 bytes.
-4. The file system shall use an indexed allocation scheme.
-5. The file system shall support file names of up to 255 characters.
-6. Supported file names shall only be alphanumeric with “.”
+* Your program shall allocate 5 MB (5242880 bytes) of disk space for the file system. 1.4: The file system shall support files up to 131,072 bytes in size.
+* The file system shall support up to 128 files.
+* The file system block size shall be 4096 bytes.
+* The file system shall use an indexed allocation scheme.
+* The file system shall support file names of up to 255 characters.
+* Supported file names shall only be alphanumeric with “.”
