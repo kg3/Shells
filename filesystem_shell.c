@@ -22,9 +22,9 @@
 #include <pthread.h>
 #include <ctype.h>
 
-#define DEBUG 0					/* current coding: 0 False; 1 True */
+#define DEBUG 0				/* current coding: 0 False; 1 True */
 #define MAX_INPUT 1024			/* maximum amount of chars in a line of input */
-#define MAX_CMND 3				/* maximum amount of commands */
+#define MAX_CMND 3			/* maximum amount of commands */
 #define DELIM " \r\n"			/* delimiters for tokenizing from strsep */
 
 /* for file system */
@@ -35,7 +35,7 @@
 #define	MAX_SIZE 131072			/* maximum file size */
 #define MAX_FILES 128			/* maximum files supported */
 #define MAX_BLOCKS 32			/* maximum amount of blocks per file: 131072 / 4096 = 32  */
-#define META 3					/* size of meta arrays */
+#define META 3				/* size of meta arrays */
 
 int input(char *commands[MAX_CMND],int argc, char *argv[]);
 int SpecialCommands(char *commands[MAX_CMND]);
@@ -78,7 +78,7 @@ int main( int argc, char *argv[] )
 		bits[i] = 0;
 	}
 	
-    /* WeLcOmE MeSsAgE */
+    	/* WeLcOmE MeSsAgE */
 	welcome();
 	
 	/* --BeginInfiniteLoop-- */ 
@@ -139,7 +139,7 @@ int main( int argc, char *argv[] )
 
 	}/* --EndInfiniteLoop-- */
 	
-	/* If I'm here I want to exit */
+    /* If I'm here I want to exit */
     return 0 ;	    
 }
 
@@ -160,7 +160,7 @@ int put(char *commands[MAX_CMND])
 	/* find a meta data spot */
 	for(i=0; i < MAX_FILES; i++)
 	{
-		if( (metaArray[i].meta[0]) )
+		if( metaArray[i].meta[0] )
 		{
 			if( strcmp(metaArray[i].meta[0], commands[1]) == 0)
 			{
@@ -180,7 +180,7 @@ int put(char *commands[MAX_CMND])
 	
 	status = stat(commands[1],&buf);
 
-    if (status == -1) 
+    	if (status == -1) 
 	{
 	    perror("Status of file changed\n");
 	    exit(EXIT_FAILURE);
@@ -380,8 +380,8 @@ int get(char *commands[MAX_CMND])
 	while(copy_size > 0)
 	{
 		// If the remaining number of bytes we need to copy is less than BLOCK_SIZE then
-      	// only copy the amount that remains. If we copied BLOCK_SIZE number of bytes we'd
-        // end up with garbage at the end of the file.
+      		// only copy the amount that remains. If we copied BLOCK_SIZE number of bytes we'd
+        	// end up with garbage at the end of the file.
 		if( copy_size < BLOCK_SIZE )
 		{
 			num_bytes = copy_size;
@@ -520,7 +520,7 @@ int freespace()
  * Just in case return the amount of commands entered if needed in future
  * /returns: (int) amount of commands & adds to (char) array; commands
  * /params: char array pointer to 2D char array (preallocated)
- * **/
+ **/
 int input(char *commands[MAX_CMND], int argc, char *argv[])
 {
     char *buffer, *input = (char*) malloc( MAX_INPUT * sizeof(char) );
@@ -564,12 +564,12 @@ int input(char *commands[MAX_CMND], int argc, char *argv[])
 	
 	if (countD == -1)
 	{
-	/**
-	 * forseeing scrubbing BO input, watching for NULL when user enters more than MAX_INPUT
-	 * If user does, program automagically exits. If user inputs more commands than MAX_CMND,
-	 * program exits automagically but the user needs to be notified as to why.
-	 * Any input for commands beyond CMND_LEN is neglected and program continues.
-	 **/
+		/**
+		 * forseeing scrubbing BO input, watching for NULL when user enters more than MAX_INPUT
+		 * If user does, program automagically exits. If user inputs more commands than MAX_CMND,
+		 * program exits automagically but the user needs to be notified as to why.
+		 * Any input for commands beyond CMND_LEN is neglected and program continues.
+		 **/
 		if( fgets(input,MAX_INPUT,stdin) != NULL)
 		{
 			/* make temporary space to tokenize commands with for copying out of input */
@@ -772,7 +772,7 @@ void welcome()
 	printf("\n.::Indexed file System::.\n");
 	printf("\t5 MB (5242880 bytes) of disk space\n"); 
 	printf("\tfiles up to 131,072 bytes in size.\n");
-    printf("\tup to 128 files.\n");
-    printf("\tblock size of 4096 bytes.\n");
-    printf("\tfile names of up to 255 characters.\n"); 
+    	printf("\tup to 128 files.\n");
+    	printf("\tblock size of 4096 bytes.\n");
+    	printf("\tfile names of up to 255 characters.\n"); 
 }
