@@ -1,8 +1,8 @@
 /*
  * Name: Kurt Gibbons
  * Description: File system that has 5MB resident in memory. Indexed allocated
- *				like NTFS. File system is not persistent. Single directory.  Much like
- *        CP/M with a longer filename
+ *		like NTFS. File system is not persistent. Single directory.  Much like
+ *        	CP/M with a longer filename
  *				
  * 				
  */
